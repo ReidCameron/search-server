@@ -1,12 +1,12 @@
 /* Imports */
 import dotenv from 'dotenv'; dotenv.config({ path: process.cwd() + '/.env' });
-import { buildFilesQuery, buildProductQuery } from "../utils/gqlQueries.mjs";
-import { buildUrl, handleize } from "../utils/functions.mjs";
-import { registerFilters } from "../utils/registerFilters.mjs";
-import { LiquidEngine } from "../utils/LiquidEngine.mjs";
-import { ShopifyAPIClient } from "../utils/ShopifyAPIClient.mjs";
-import { getBlockContext } from "../utils/getBlockContext.mjs";
-import { StorageHandler } from '../utils/StorageHandler.mjs';
+import { buildFilesQuery, buildProductQuery } from "../utils/gqlQueries.js";
+import { buildUrl, handleize } from "../utils/functions.js";
+import { registerFilters } from "../utils/registerFilters.js";
+import { LiquidEngine } from "../utils/LiquidEngine.js";
+import { ShopifyAPIClient } from "../utils/ShopifyAPIClient.js";
+import { getBlockContext } from "../utils/getBlockContext.js";
+import { StorageHandler } from '../utils/StorageHandler.js';
 
 /* Global Vars */
 const globalContext = {}; //This objcet will be used and edited in mulitple places

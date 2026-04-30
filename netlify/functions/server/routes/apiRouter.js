@@ -1,10 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const search = require("../handlers/search");
-const payload = require("../misc/payload").default; //DEBUG
+import { Router, json } from 'express';
+const router = Router();
+import { handler } from "../handlers/search";
+import payload from "../misc/payload"; //DEBUG
 
 //Middleware
-router.use(express.json({ limit: '1mb' }));
+router.use(json({ limit: '1mb' }));
 
 //Routes
 router.get('/', async (req, res, next) =>{
@@ -18,7 +18,7 @@ router.get('/search', async (req, res, next) =>{
         // console.time("Parse Post Body");
         // const bodyJson = JSON.parse(req.body.toString());
         // console.timeEnd("Parse Post Body");
-        await search.handler({body: payload, res});
+        await handler({body: payload, res});
     } catch (error) { next(error); }
     console.timeEnd("Total");
     return;
@@ -30,7 +30,7 @@ router.post('/search', async (req, res, next) =>{
         console.time("Parse Post Body");
         const bodyJson = JSON.parse(req.body.toString());
         console.timeEnd("Parse Post Body");
-        await search.handler({body: bodyJson, res});
+        await handler({body: bodyJson, res});
     } catch (error) { next(error); }
     console.timeEnd("Total");
     return;
@@ -42,4 +42,4 @@ router.use((req, res) => {
 });
 
 //Exports
-module.exports = router;
+export default router;

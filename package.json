@@ -2,6 +2,7 @@
   "name": "search-server",
   "version": "1.0.0",
   "description": "Server for search functions",
+  "type": "module",
   "scripts": {
     "dev": "netlify dev"
   },

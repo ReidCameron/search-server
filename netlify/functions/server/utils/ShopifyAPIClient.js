@@ -1,7 +1,7 @@
 
 import { createAdminApiClient } from "@shopify/admin-api-client";
 import { createStorefrontApiClient } from "@shopify/storefront-api-client";
-import { StorageHandler } from './StorageHandler.mjs';
+import { StorageHandler } from './StorageHandler.js';
 import dotenv from 'dotenv'; dotenv.config({ path: process.cwd() + '/.env' });
 
 export class ShopifyAPIClient{

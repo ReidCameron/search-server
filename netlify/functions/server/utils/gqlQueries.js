@@ -1,4 +1,4 @@
-import { handleize } from "./functions.mjs";
+import { handleize } from "./functions.js";
 
 export function buildProductQuery(results, config = {}){
     return {
