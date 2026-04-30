@@ -17,7 +17,9 @@
     "serverless-http": "^4.0.0"
   },
   "devDependencies": {
+    "dotenv": "^16.4.7",
     "netlify": "^24.11.3",
-    "dotenv": "^16.4.7"
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
   }
 }
