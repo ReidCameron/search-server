@@ -3,19 +3,20 @@
   "version": "1.0.0",
   "description": "Server for search functions",
   "scripts": {
-    "build": "netlify-lambda build server",
-    "dev": "netlify build && netlify dev",
-    "server": "nodemon dev.js"
+    "dev": "netlify dev"
   },
   "author": "Cameron Reid",
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
+    "@netlify/blobs": "^10.7.4",
+    "@shopify/admin-api-client": "^1.1.2",
+    "@shopify/storefront-api-client": "^1.0.10",
     "express": "^4.21.1",
-    "netlify-lambda": "^2.0.16",
-    "serverless-http": "^3.2.0"
+    "helmet": "^8.1.0",
+    "liquidjs": "^10.25.5",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "netlify": "^24.11.3",
+    "dotenv": "^16.4.7"
   }
 }
