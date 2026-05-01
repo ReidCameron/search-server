@@ -68,7 +68,7 @@ export async function handler({ body, res }) {
             
             renderedComponents.push({
                 type: block.type,
-                markup: markup.replace(/\n|\s{2,}/g, ''),
+                markup: markup, //TODO: review limiting whitespace
             });
         })
     );
