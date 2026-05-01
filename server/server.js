@@ -8,10 +8,16 @@ const app = express();
 
 /* Middleware */
 app.use(helmet());
+app.use((req, res, next) => {
+  res
+    .header("access-control-allow-methods", "GET, HEAD")
+    .header("access-control-allow-origin","*")
+  next();
+});
 
 /* Routes */
 app.use('/api', apiRouter);
-app.use((req, res, next) => { res.sendStatus(404); })
+app.use((req, res, next) => { res.sendStatus(404); });
 
 /* Error Handler */
 app.use((err, req, res, next) => {
