@@ -68,8 +68,7 @@ export async function handler({ body, res }) {
             
             renderedComponents.push({
                 type: block.type,
-                content: markup.replace(/\n|\s{2,}/g, ''),
-                selector: block.settings.selector,
+                markup: markup.replace(/\n|\s{2,}/g, ''),
             });
         })
     );
